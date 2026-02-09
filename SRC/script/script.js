@@ -133,38 +133,20 @@ if (contactForm) {
 
 function sendMail() {
 
-	// Remove this section after adding the Email Js APi key in the script tag of the contact.html, uncomment this function section
-	// From this
-	// contactSubmitAfter.classList.add('show');
-	// formSection.classList.add('hide');
-	// contactSection.classList.add('csa-cs');
-	// contactForm.classList.add('csa-cf');
-	// To this
-	console.log("sendmail function triggered");
-	var params = {
-		name: document.getElementById('name').value,
-		email: document.getElementById('email').value,
-		message: document.getElementById('message').value
-	}
+    let params = {
+        from_name: document.getElementById("name").value,
+        email_id: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
 
-	const serviceID = "service_q48urvt";
-	const templateID = "template_smsbo0b";
+    emailjs.send("service_47wik99", "template_jdbolqc", params)
+        .then(function (response) {
+            alert("✅ Message Sent Successfully!");
 
-	emailjs.send(serviceID, templateID, params)
-		.then(
-			res => {
-				document.getElementById('name').value = "";
-				document.getElementById('email').value = "";
-				document.getElementById('message').value = "";
-
-				contactSubmitAfter.classList.add('show');
-				formSection.classList.add('hide');
-				contactSection.classList.add('csa-cs');
-				contactForm.classList.add('csa-cf');
-
-			}
-		)
-		.catch((error) => {
-			console.log("Email not sent!!",error);
-		})
+            document.getElementById("contact-form").reset();
+        })
+        .catch(function (error) {
+            alert("❌ Message Not Sent!");
+            console.log("EmailJS Error:", error);
+        });
 }

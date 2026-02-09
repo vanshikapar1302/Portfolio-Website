@@ -5,109 +5,172 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Me</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+
+    <!-- Favicon -->
     <link rel="icon" href="/Assets/favicons/favicon.png" type="image/png" sizes="32x32">
 
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 
 <body>
 
-<header class="header" id="header">
-    <a href="../../index.html" class="logo"><span class="main-icon"></span><span>Vanshika</span></a>
-
-    <div class="navbar">
-        <a href="../../index.html">Home</a>
-        <a href="./skills.html">Skills</a>
-        <a href="./projects.html">Projects</a>
-
-        <a href="./education.html">Education</a>
-    </div>
-
-    <div class="main">
-        <a href="contact.html" class="user main-items active">
-            <i class="fas fa-envelope cm-icon"></i>Contact Me
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <a href="../../index.html" class="logo">
+            <span class="main-icon"></span>
+            <span>Vanshika</span>
         </a>
-        <div class="main-items menu-icon-container" id="menu-icon-js">
-            <div class="bx bx-menu" id="menu-icon"></div>
+
+        <div class="navbar">
+            <a href="../../index.html">Home</a>
+            <a href="./skills.html">Skills</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./education.html">Education</a>
         </div>
-    </div>
-</header>
 
-<div class="page">
-    <main class="contact-main">
-        <div class="contact-full">
+        <div class="main">
+            <a href="contact.html" class="user main-items active">
+                <i class="fas fa-envelope cm-icon"></i>Contact Me
+            </a>
 
-            <div class="contact-section">
-                <h1>Reach Me</h1>
-                <div class="border-line"></div>
+            <div class="main-items menu-icon-container" id="menu-icon-js">
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </div>
+    </header>
 
-                <div class="cs-item email">
-                    <div class="icon"><i class="fas fa-envelope"></i></div>
-                    <div class="text">
-                        <div class="placeHolder">E-mail</div>
-                        <div class="info">vanshikapar1302@gmail.com</div>
+
+    <!-- PAGE -->
+    <div class="page">
+        <main class="contact-main">
+
+            <div class="contact-full">
+
+                <!-- LEFT SIDE INFO -->
+                <div class="contact-section">
+                    <h1>Reach Me</h1>
+                    <div class="border-line"></div>
+
+                    <div class="cs-item email">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">E-mail</div>
+                            <div class="info">vanshikapar1302@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="cs-item number">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Phone</div>
+                            <div class="info">+91 9528818685</div>
+                        </div>
+                    </div>
+
+                    <div class="cs-item address">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Location</div>
+                            <div class="info">Modinagar, UP India</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="cs-item number">
-                    <div class="icon"><i class="fas fa-phone"></i></div>
-                    <div class="text">
-                        <div class="placeHolder">Phone</div>
-                        <div class="info">+91 9528818685</div>
-                    </div>
-                </div>
 
-                <div class="cs-item address">
-                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="text">
-                        <div class="placeHolder">Location</div>
-                        <div class="info">Modinagar, UP India</div>
-                    </div>
-                </div>
+                <!-- RIGHT SIDE FORM -->
+                <section class="contact-form-box">
+                    <h1>Contact Me</h1>
+                    <div class="border-line"></div>
+
+                    <!-- FORM -->
+                    <form id="contact-form" class="contact-form">
+
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-button">
+                            Submit
+                        </button>
+
+                    </form>
+                </section>
+
             </div>
 
-            <section class="contact-form">
-                <h1>Contact Me</h1>
-                <div class="border-line"></div>
+        </main>
 
-                <form id="contact-form" class="form-section" onsubmit="event.preventDefault(); sendMail();">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" id="name" required>
-                    </div>
 
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="email" required>
-                    </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="left">
+                &copy; 2026 • Vanshika • All Rights Reserved
+            </div>
+        </footer>
 
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea id="message" rows="5" required></textarea>
-                    </div>
+    </div>
 
-                    <button type="submit" class="contact-button">Submit</button>
-                </form>
-            </section>
 
-        </div>
-    </main>
+    <!-- ✅ EMAILJS FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <footer class="footer">
-        <div class="left">&copy; 2026 • Vanshika • All Rights Reserved</div>
-    </footer>
-</div>
+    <script>
+        (function () {
+            emailjs.init("hXo2bDwMYsbtoRYxs"); // ✅ Your Public Key
+        })();
+    </script>
 
-<script src="../script/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<script>
-    (function () {
-        emailjs.init("7J570LfphgYLD4JeX");
-    })();
-</script>
+    <!-- ✅ MAIN SCRIPT -->
+    <script>
+        // Form Submit Event
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Collect Values
+            let params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+
+            // EmailJS IDs
+            const serviceID = "service_47wik99";
+            const templateID = "template_jdbolqc";
+
+            // Send Mail
+            emailjs.send(serviceID, templateID, params)
+                .then(() => {
+                    alert("✅ Message Sent Successfully!");
+
+                    // Clear Form
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                })
+                .catch((error) => {
+                    alert("❌ Message Not Sent!");
+                    console.log("Error:", error);
+                });
+        });
+    </script>
 
 </body>
+
 </html>
