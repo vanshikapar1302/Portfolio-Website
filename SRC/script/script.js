@@ -139,7 +139,7 @@ function sendMail() {
         message: document.getElementById("message").value
     };
 
-    emailjs.send("service_47wik99", "template_jdbolqc", params)
+    emailjs.send("service_47wik99", "ttemplate_jdbolqc", params)
         .then(function (response) {
             alert("✅ Message Sent Successfully!");
 
